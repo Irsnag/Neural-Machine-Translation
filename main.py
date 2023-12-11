@@ -1,9 +1,11 @@
-from 
+from model.py import seq2seqModel
+import nltk
+nltk.download('punkt')
 
 is_prod = True # production mode or not
 
 if is_prod:
-    model = seq2seqModel.load(path_to_save_models + 'pretrained_moodle.pt')
+    model = seq2seqModel.load('pretrained_moodle.pt')
 
     to_test = ['I am a student.',
                'I have a red car.',  # inversion captured
